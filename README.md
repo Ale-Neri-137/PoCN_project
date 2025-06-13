@@ -5,7 +5,7 @@ In this repository you will find the simulations and analyses carried out for th
 The repo contains the code, processed data and report for two selected tasks:
 
 - **Voter model (#28)**  
-  Theoretical and numerical study of the classical voter model and the noisy voter model on various network topologies to explore ordering, consensus time and finite-size effects.  
+  Simulation of the classical voter model and the noisy voter model on various network topologies to explore ordering and finite-size effects.  
   **Score:** 0.5
 
 - **European transportation networks I (#45)**  
