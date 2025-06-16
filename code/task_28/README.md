@@ -13,5 +13,5 @@ Pick **one** of the methods below; Conda is by far the smoothest.
 Or dowload it from source with Linux/macOS.
 
 
-The plotting functions use sample_times, wich is an array of times when to sample the interface density, this is defined in main and is not stored in the results, for the runs present in the data part, use `sample_times   = log_schedule(200, 100000, 1.1)`, the `log_schedule` function is defined in voter_simulation.py
+The plotting functions use sample_times, wich is an array of times when to sample the interface density, this is defined in main and is not stored in the results, for the runs present in the data part, use `sample_times   = log_schedule(200, 100000, 1.1)`, the `log_schedule` function is defined in voter_model_simulation.py
 
