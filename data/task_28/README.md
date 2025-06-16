@@ -1,6 +1,6 @@
 The data is strutured as:
 
-`data[i]=["MODEL",{params : params_val} , μ , np.array([ρ_avg]),np.array([ρ_Var]) ) `
+`data[i]=[ "MODEL" , {params : params_val} , μ , np.array([ρ_avg]), np.array([ρ_Var]) ] `
 
 The parameter part is a dictionary and could be any (noise, rewiring p, m for BA ecc.);
 μ is the graph realization index.
