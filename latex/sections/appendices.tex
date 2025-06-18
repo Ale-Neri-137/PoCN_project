@@ -21,9 +21,11 @@
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=14cm,keepaspectratio]{images/BA_low_noise.png}
-  \caption{Investigation of the behavior of low noise experiments on a BA network with m=2, the temporal variance is even larger, and the middle noise is characterized by spikes,they could be reflection of the transient between states in the unimodal phase, but is not a good guess}
+  \caption{Investigation of the behavior of low noise experiments on a BA network with m=2, the temporal variance is even larger, and the middle noise is characterized by spikes,they could be reflection of the transient between states in the unimodal phase.}
   
 \end{figure}
+
+
 \begin{figure}[htbp]
   \centering
   \includegraphics[width=9cm,keepaspectratio]{images/quick_check.png}
@@ -36,16 +38,92 @@
   \caption{Classic voter model on BA networks at increasing values of m, the light trajectories are the 12 single-graph trajectories of which the main ones are the average, when a plateau exists (m>1), its value is an increasing function of m.}
   
 \end{figure}
+\clearpage
 
 
+
+
+
+\section{Missing stations}
+\label{app:missing}
+\begin{table}[!htbp]
+  \centering
+  \caption{Gap between ICC station list and official national totals}
+  \begin{tabular}{@{}lrrr@{}}
+    \toprule
+    Country & Data count & $\Delta$\tnote{*} & $\Delta$/100 km \\
+    \midrule
+    Greece             &   373 &   $-163$ &  $-7.28$ \\
+    Latvia             &   239 &    $-99$ &  $-5.32$ \\
+    Poland    & 1\,027 &   $-427$ &  $-2.18$ \\
+    Luxembourg         &    71 &     $-3$ &  $-1.09$ \\
+    Bulgaria  &   327 &    $-12$ &  $-0.30$ \\
+    Belgium            &   542 &     13 &   0.35 \\
+    Georgia            &    44 &      7 &   0.44 \\
+    Finland            &   167 &     33 &   0.56 \\
+    Romania   &   634 &    366 &   1.82 \\
+    Lithuania          &    60 &     44 &   2.30 \\
+    Estonia            &    31 &     30 &   2.58 \\
+    Slovakia           &   583 &    122 &   3.36 \\
+    Sweden             &   147 &    413 &   3.78 \\
+    Ireland            &    77 &     73 &   4.35 \\
+    Moldova            &     9 &     62 &   5.39 \\
+    Serbia    &   107 &    218 &   5.79 \\
+    Hungary            &   136 &    464 &   5.84 \\
+    Ukraine            &   290 &  1\,157 &   5.85 \\
+    Norway             &    71 &    266 &   6.27 \\
+    North Macedonia    &    74 &     43 &   6.30 \\
+    Netherlands        &   177 &    221 &   7.23 \\
+    Spain              &   204 &  1\,249 &   7.64 \\
+    Italy              &   206 &  1\,994 &   8.12 \\
+    France             &   620 &  2\,380 &   8.66 \\
+    Czech Republic     &   207 &    844 &   8.82 \\
+    United Kingdom     &   707 &  1\,878 &  11.61 \\
+    Switzerland        &   162 &    639 &  12.02 \\
+    Germany            & 1\,124 &  4\,276 &  12.82 \\
+    Denmark            &   180 &    370 &  14.18 \\
+    Austria            &   258 &    773 &  15.91 \\
+    Slovenia           &    30 &    198 &  16.38 \\
+    Portugal           &   113 &    448 &  17.73 \\
+    Croatia            &    63 &    483 &  18.55 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+\clearpage
+\section{Rail visualization}
+\label{app:ralvis}
+
+\vspace*{\fill}       % ① push everything that follows toward the centre
+
+\begin{center}
+  \includegraphics[width=14cm,keepaspectratio]{images/1000107259.jpg}
+
+  \captionof{figure}{Detail of German rail network before and after the pruning algorithm.}
+\end{center}
+
+\vspace*{\fill}       % ② push everything that precedes toward the centre
+
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=14cm,keepaspectratio]{images/FullEurope_railnet.png}
+  \caption{Europe rail network (only elements 1,2,n-1,n of each linestring are kept), here is evident that the fraction of rail stations present in the dataset differ by country.}
+  
+\end{figure}
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=15cm,keepaspectratio]{images/Europe_pruned.png}
+  \caption{Europe railnetwork afret pruning.}
+  
+\end{figure}
 \chapter{Some remarks}
 \section{Voter model}
-It would be interesting to address quantitatively both the plateau value and the the lifetime of the system, for the former, single runs must be analyzed, because the plateau represents a metastable state for the system and has a precise value per graph realization; in theory it should be affected by quenched disorder, but maybe the effects vanish in the termodinamic limit.\\
-Looking at  \ref{fig:vm comparison}, a perplexing phenomena is also the difference in behaviour between the SSF and the BA ($m=1$), the only thing they share is having a spectral dimension smaller than two, but its curious how the BA seems to be a lower bound for the SSF, being just tangent to it right before the decay, this is also true for the 1d lattice, other low dimansional topologies should be studied to see how they relate with each other.\\
+It would be interesting to address quantitatively both the plateau value and the lifetime of the system, for the former, single runs must be analyzed, because the plateau represents a metastable state for the system and has a precise value per graph realization; in theory it should be affected by quenched disorder, but maybe the effects vanish in the thermodynamic limit.\\
+Looking at  \ref{fig:vm comparison}, a perplexing phenomenon is also the difference in behavior between the SSF and the BA ($m=1$), the only thing they share is having a spectral dimension smaller than two, but its curious how the BA seems to be a lower bound for the SSF, being just tangent to it right before the decay, this is also true for the 1d lattice, other low dimensional topologies should be studied to see how they relate with each other.\\
 
 Finally, the authors of \cite{suchecki2005voter} never mention the spectral dimension, but they don't define clearly what dimension are they talking about, they talk about disorder (parameter $p$) wich can be understood to be small-worldness, and dimension separately, it would be interesting to compare the voter model dynamics while keeping in mind the three concepts of average path length, topological, and spectral dimension, finding the edge cases could confirm or refute that the spectral dimension is truly the only deciding factor for determining if the system will order or not. 
 \section{European rail network}
 The easiest way to address Y-junctions is to simply add metadata based on angles, some kind of node variable that tells a walker:"if you come from $a$ you cannot go to $b$" (as in \ref{fig: junctionexample}) so that the distance $d(a,b) = d(a,c) + d(b,c)$; "purer" approaches failed: I couldn't find a directed subgraph to replace the junction node with and achieve desired effect, nor is effective the idea to transform from $G$ to $L(G)$ delete there, and then anti-transform (the anti-transorfm doesn't exist once you remove the desired nodes).
 For degree-4 nodes, I found it almost impossible to tell if the rails are simply crossing or there is an actual junction, angles don't always cut it.\\ 
-Another thing that I saw was that stations, especially bigger ones, tend to have clumps of $ns$ nodes around them, in reality big stations are far from being points, rather, they extend over a (possibly vast) area. A simple strategy could be just to delete all nodes close to a station and give it all their connections, although defining a universal radius is not straightforward.\\
+Another thing that I saw was that stations, especially bigger ones, tend to have clumps of $ns$ nodes around them, in reality big stations are far from being points, rather, they extend over a (possibly vast) area. A simple strategy could be just to delete all nodes close to a station and give it all their connections, although defining a universal radius is not straightforward.
 \end{appendices}
