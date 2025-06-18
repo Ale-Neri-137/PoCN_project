@@ -6,12 +6,12 @@ The resulting graph consists of two kind of nodes, station ($s$) and non-station
 Although the fine details can be very important, the first instinct was to use the $ns$ nodes to build a network consisting entirely of $s$ nodes, connected if a path that does not cross any other $s$ node exists between them. However, this task is extremely challenging while keeping an undirected graph with no additional node-metadata, the fundamental reason is because of rail junctions.
 
 \begin{wrapfigure}{r}{7.5cm}  
-\label{fig: junctionexample}
+\label{fig:junctionexample}
   \centering
   \vspace{-\baselineskip}    % (optional) nudge upward a bit
   \includegraphics[width=\linewidth,keepaspectratio]{images/junction_example.jpg}
   \caption{German rail junction. a, b and c are $s$ nodes; on the right a Maps view.}
-  \label{fig:junction}
+
 \end{wrapfigure}
 In the provided example, it is clear that in order to go from $a$ to $b$, one must pass through $c$, and, while in this case the connection is straightforward ($a \, - \, c$  ;  $b\, - \, c$) a lot of junctions are intertwined with each other and there are many edge cases.\\
 Until the definition of \emph{path} is addressed properly, centrality measures of betweenness and closeness could be misleading.
